@@ -19,6 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'nq6r2b$d&9p3@@6*go71jj6m-8q=qb53p88v5*@#$)g1zsie4g'
 
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'register'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -119,3 +121,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_URL = '/media/'
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (MEDIA_ROOT,)
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
